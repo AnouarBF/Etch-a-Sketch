@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Etch-a-Sketch</h1>
+    </header>
+    <div class="container">
+        <div class="board"></div>
+        <div class="buttons">
+            <div class="choice">
+                <input type="color" id="selectedColor" onchange="changeColor(value)">
+            </div>
+            <button onclick="changeColor('black')">Black</button>
+            <button onclick = "changeColor('random')">Random</button>
+            <button onclick="changeColor('blue')">Eraser</button>
+            <button onclick="resetBoard()">Clear</button>
+            <div class="size">
+                <div class="gridSizeText" style="text-align: center; font-size: 25px;">16</div>
+                <input type="range" class="gridValue" value="16" min="1" max="64" onchange="changeSize(this.value)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
